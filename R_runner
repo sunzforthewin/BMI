@@ -1,0 +1,16 @@
+# Function to calculate BMI
+# @param weight: weight in kilograms
+# @param height: height in meters
+# @return: BMI value
+calculate_bmi <- function(weight, height) {
+  # Check if weight and height are numeric
+  if (!is.numeric(weight) || !is.numeric(height)) {
+    stop("Weight and height must be numeric")
+  }
+  
+  # Calculate BMI
+  bmi <- weight / (height^2)
+  
+  # Return BMI value
+  return(bmi)
+}
